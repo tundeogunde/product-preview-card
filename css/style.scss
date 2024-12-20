@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+$pry_color: #3c8067;
+$cream_color: #f2ebe3;
+$text_color: #6c7289;
+$heading_color: #1c232b;
+$text_background: #ffffff;
+$bdr_radius: 15px;
+$btn_bdr_radius: 10px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $cream_color;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  width: 90vw;
+
+  .container {
+    background-color: $text_background;
+    border-radius: $bdr_radius;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    .image_container {
+      width: 100%; /* Full width */
+      height: 360px; /* Set height */
+      background-image: url("../images/image-product-mobile.jpg");
+      background-size: cover; /* Ensure the image covers the entire container */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevent repetition */
+      border-top-left-radius: $bdr_radius;
+      border-top-right-radius: $bdr_radius;
+      border-bottom-left-radius: 0;
+    }
+    .content {
+      padding: 25px;
+      .product {
+        color: $text_color;
+        text-transform: uppercase;
+        font-family: "Montserrat";
+        font-size: 14px;
+        letter-spacing: 4px;
+      }
+      h1 {
+        font-family: "Fraunces";
+        font-weight: 700;
+        margin: 10px 0;
+        line-height: 1;
+      }
+      p {
+        font-family: "Montserrat";
+        color: $heading_color;
+        font-size: 14px;
+        margin: 10px 0;
+        line-height: 1.6;
+      }
+      .prices {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        span.new_price {
+          font-family: "Fraunces";
+          color: $pry_color;
+          font-size: 30px;
+          font-weight: 700;
+        }
+        span.old_price {
+          font-family: "Montserrat";
+          color: $heading_color;
+          font-size: 14px;
+          margin-left: 15px;
+          text-decoration: line-through;
+        }
+      }
+      button {
+        background-color: $pry_color;
+        color: $text_background;
+        width: 100%;
+        padding: 15px;
+        font-family: "Montserrat";
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: $btn_bdr_radius;
+        border: none;
+        .icon {
+          width: 16px;
+          height: 16px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 15px 0;
+  .attribution {
+    text-align: center;
+    font-size: 10px;
+    color: $text_color;
+    font-family: "Montserrat";
+  }
+  .attribution a {
+    color: #3e52a3;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 620px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    width: 560px;
+    height: auto;
+    .container {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      .image_container {
+        flex: 50%;
+        width: 100%; /* Full width */
+        background-image: url("../images/image-product-desktop.jpg");
+        background-size: cover; /* Ensure the image covers the entire container */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Prevent repetition */
+        border-top-left-radius: $bdr_radius;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: $bdr_radius;
+      }
+      .content {
+        flex: 50%;
+        padding: 0px;
+        .product,
+        h1,
+        p,
+        .prices,
+        .btn {
+          padding: 0px 20px;
+        }
+      }
+    }
+  }
+}

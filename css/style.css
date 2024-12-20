@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f2ebe3;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  width: 90vw;
+}
+main .container {
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+main .container .image_container {
+  width: 100%; /* Full width */
+  height: 360px; /* Set height */
+  background-image: url("../images/image-product-mobile.jpg");
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repetition */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0;
+}
+main .container .content {
+  padding: 25px;
+}
+main .container .content .product {
+  color: #6c7289;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+main .container .content h1 {
+  font-family: "Fraunces";
+  font-weight: 700;
+  margin: 10px 0;
+  line-height: 1;
+}
+main .container .content p {
+  font-family: "Montserrat";
+  color: #1c232b;
+  font-size: 14px;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+main .container .content .prices {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+main .container .content .prices span.new_price {
+  font-family: "Fraunces";
+  color: #3c8067;
+  font-size: 30px;
+  font-weight: 700;
+}
+main .container .content .prices span.old_price {
+  font-family: "Montserrat";
+  color: #1c232b;
+  font-size: 14px;
+  margin-left: 15px;
+  text-decoration: line-through;
+}
+main .container .content button {
+  background-color: #3c8067;
+  color: #ffffff;
+  width: 100%;
+  padding: 15px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+}
+main .container .content button .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+footer {
+  padding: 15px 0;
+}
+footer .attribution {
+  text-align: center;
+  font-size: 10px;
+  color: #6c7289;
+  font-family: "Montserrat";
+}
+footer .attribution a {
+  color: #3e52a3;
+  text-decoration: none;
+}
+
+@media (min-width: 620px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    width: 560px;
+    height: auto;
+  }
+  main .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  main .container .image_container {
+    flex: 50%;
+    width: 100%; /* Full width */
+    background-image: url("../images/image-product-desktop.jpg");
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+  }
+  main .container .content {
+    flex: 50%;
+    padding: 0px;
+  }
+  main .container .content .product,
+  main .container .content h1,
+  main .container .content p,
+  main .container .content .prices,
+  main .container .content .btn {
+    padding: 0px 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
